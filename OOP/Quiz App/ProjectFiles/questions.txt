@@ -1,0 +1,7 @@
+2|Best football player?|Messi|20
+5|Capital of Romania|Bucharest|15
+3|2+2=?|4|10
+1|5+7=?|12|7
+45|Hey|hi|6
+11|hi|asfd|6
+13|hi|asfd|19
