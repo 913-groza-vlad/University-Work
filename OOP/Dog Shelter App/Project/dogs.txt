@@ -1,0 +1,9 @@
+2,Chihuahua,Pinky,1,https://supervetsolutions.ro/wp-content/uploads/2020/06/3027438-1920x1920.jpg
+5,Golden Retriever,Jack,7,https://www.dogtime.com/assets/uploads/2011/01/file_22980_golden-retriever-300x189.jpg
+8,Bulldog,Spike,4,https://dogsbestlife.com/wp-content/uploads/2020/05/English-bulldog-scaled.jpeg
+9,Shiba Inu,Jackie,11,https://www.dogtime.com/assets/uploads/2011/01/file_23160_shiba-inu-300x189.jpg
+12,Husky,Bolt,6,https://extrucan.ro/wp-content/uploads/2021/08/Siberian-Husky.jpg
+14,Maltese,Sindy,4,https://www.dogtime.com/assets/uploads/2011/01/file_23114_maltese-300x189.jpg
+15,Husky,Stormi,2,https://thehappypuppysite.com/wp-content/uploads/2015/09/The-Siberian-Husky-HP-long.jpg
+7,Rottweiler,Max,2,https://www.dogtime.com/assets/uploads/2011/01/file_22942_rottweiler-300x189.jpg
+13,Collie,Candy,1,https://www.dogtime.com/assets/uploads/2011/01/file_23186_collie-300x189.jpg
