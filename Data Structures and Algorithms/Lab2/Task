@@ -1,0 +1,1 @@
+ADT SortedBag – using a DLL with (element, frequency) pairs. Pairs are ordered based on a relation between the elements.
