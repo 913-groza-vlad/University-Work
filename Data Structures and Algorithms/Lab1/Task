@@ -1,0 +1,1 @@
+ADT  Sorted  Map – represented  as  a  dynamic array  of  <key,  value>  pairs, sorted using a relation over the keys.
