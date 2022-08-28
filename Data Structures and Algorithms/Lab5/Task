@@ -1,0 +1,2 @@
+ADT SortedBag – using a BST (Binary Search Tree) with linked  representation  with  dynamic  allocation. 
+If an element appears multiple times, it will be stored multiple times in the BST.
