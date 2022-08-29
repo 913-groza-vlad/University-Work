@@ -1,0 +1,9 @@
+Implementation of the Connect Four Game (human vs computer) in Python having a graphical user interface designed with Pygame.
+
+  Short description of the game:
+Connect Four is a two-player connection board game, in which the players choose a color (red or yellow) and then take turns dropping colored tokens 
+into a seven-column, six-row vertically table. The pieces fall straight down, occupying the lowest available space within the column. 
+The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens.
+
+The application provides three levels of dificulty (easy, medium, hard) which can be selected from a 'settings.properties' file.
+The first move is given randomly to one of the players and, at the end of the game, a message which contains the result of the game is shown.  
