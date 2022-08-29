@@ -24,4 +24,48 @@ chooses next, the application will again show the first dog.
 then all the dogs will be considered. The same options (a, b and c) apply in this case.
   e. See the adoption list.
   
+Other requirements:
+  -> Replace your DynamicVector template with the STL vector. Use STL algorithms wherever possible
+  in your application (e.g. in your filter function you could use copy_if, count_if). Replace all your
+  for loops either with STL algorithms, or with the ranged-based for loop (C++11).
+  
+  -> Store your data in a text file. When the program starts, the entities in the database (file) will be
+  read. The modifications made during the execution of the application should be stored in the file.
+  For this feature, use the iostream library. Create insertion and extraction operators for your
+  entities and use these when reading/writing to files or console.
+  
+  -> Use exceptions to signal errors:
+    - from the repository;
+    - validation errors – validate your entities using Validator classes;
+    - create your own exception classes.
+  Validate your input data.
+  
+  -> Store your adoption list in a file. When the application starts, the user should choose the type of file (CSV or HTML).
+Depending on this type, the application should save the list in the correct format. 
+
+  -> Add a new command, allowing the user to see the adoption list.
+  Displaying the list means opening the saved file (csv or html) with the correct application:
+    - CSV file – with Notepad, Notepad++, Microsoft Excel or OpenOffice Calc
+    - HTML file – with a browser
+    
+  -> Create a UML diagram for your entire application. For this, you can use any tool that you like
+  (StarUML is an example of open source software for UML). Do not draw the diagram by hand.
+  
+  -> Create a graphical user interface (GUI) for the application, using Qt.
+
+  -> Add a multiple undo and redo functionality for the operations “add”, “remove”, “update” in
+  your repository. Implement this functionality using inheritance and polymorphism. You will
+  have a “Undo” and “Redo” buttons on your GUI, as well as a key combination to undo and
+  redo the operations (e.g. Ctrl+Z, Ctrl+Y).
+  
+  -> Create a new window which presents the contents of your adoption list.
+  This window will contain a list view/table view with all the elements in your list. You must use Qt
+  View/Model components (QTableView). Create your own model – a class which inherits from
+  QAbstractListModel or QAbstractTableModel.
+
+
+
+
+
+
   
