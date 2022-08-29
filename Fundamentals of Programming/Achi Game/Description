@@ -1,4 +1,13 @@
 Partial implementation of Achi Game (console-based user interface).
 
 Game description:
-  
+  The game is played by two players using a 3x3 board. Each player has 4 pieces that they place on the board. 
+The game is won by the player who first lines up 3 of their own pieces into a line, column or diagonal. 
+The game has two phases: placement and movement. The game rules are detailed as follows:
+    When the program is started, it displays an empty board.
+    The placement phase begins. The human (playing X) and computer (playing O) players take turns into placing 
+  their pieces on the board. Pieces can only be placed on an unoccupied square. The computer does not allow the player to win during placement.
+    If one of the players wins during placement, the game ends. Otherwise, it continues with the movement phase.
+    The movement phase of the game begins. The players take turns moving one of their own pieces into the unoccupied square.
+  Pieces can be moved only to a square that is adjacent on a row, column or diagonally. The movement phase continues until 
+  one of the players wins. The computer may move randomly. However it must recognize and make an instant win move, if available.
