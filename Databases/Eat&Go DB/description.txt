@@ -1,0 +1,13 @@
+ -Short description about Eat&Go Database-
+
+The fast food restaurant has several employees, each one having a certain role(manager, cook, waiter).
+For each employee the following data is stored: first name, last name, phone number, address and an 
+email (optionally). CV of each employee is also stored in the database.
+
+The customers of the restaurant can place one or more orders. An order is taken by one of the employees,
+who registers the first name, last name and the phone number of the customer and also the date and 
+time of the order. An order contains one or more products. Each product has a name, a price, a type
+(main course, garnish, dessert, drink etc.) and, eventually, a description. A product/dish can be 
+made by one or more ingredients. The ingredients are procured from different suppliers, for each
+delivery a list for an ingredient is brought by a delivery man. The list contains the quantity, date
+of delivery and date of expiring (if it's the case) of the ingredient.
