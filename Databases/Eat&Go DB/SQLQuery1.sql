@@ -60,7 +60,7 @@ CREATE TABLE Product (
 	Pid int PRIMARY KEY,
 	Name varchar(50) NOT NULL,
 	Price int NOT NULL,
-	Description varchar(50) NOT NULL,
+	Description varchar(150) NOT NULL,
 	PTid int FOREIGN KEY REFERENCES ProductType(PTid)
 )
 
@@ -83,11 +83,11 @@ CREATE TABLE Ingredient (
 )
 
 CREATE TABLE Preparation (
+	PrId int PRIMARY KEY IDENTITY,
 	Pid int FOREIGN KEY REFERENCES Product(Pid),
 	Iid int FOREIGN KEY REFERENCES Ingredient(Iid),
 	Description varchar(150),
 	Duration varchar(10) NOT NULL,
-	CONSTRAINT PK_ProductIngredient PRIMARY KEY(Pid, Iid)
 )
 
 

@@ -45,11 +45,11 @@ INSERT INTO Product values (42, 'Sparkling Water', 5.3, '500ml sparkling water b
 INSERT INTO Product values (43, 'Orange Juice', 12.75, '500ml juice of freshly squeezed oranges', 4)
 SELECT * FROM Product
 
-INSERT INTO Ingredient values (1, 'Spice', 'Salt'), (2, 'Spice', 'Pepper'), (3, 'Spice', 'Chilli'), (10, 'Meat', 'Beef'), (11, 'Meat', 'Pork')
-INSERT INTO Ingredient values (12, 'Meat', 'Chicken'), (13, 'Meat', 'Ham'), (50, 'Cheese', 'Cheddar'), (51, 'Cheese', 'Gouda')
-INSERT INTO Ingredient values (71, 'Vegetable', 'Tomato'), (72, 'Vegetable', 'Potato'), (73, 'Vegetable', 'Lettuce'), (74, 'Vegetable', 'Asparagus'), (75, 'Vegetable', 'Cucumber')
-INSERT INTO Ingredient values (80, 'Liquid', 'Water'), (81, 'Liquid', 'Juice'), (91, 'Sweet', 'Sugar'), (92, 'Fruit','Orange'), (93, 'Fruit', 'Raspberry')
-INSERT INTO Ingredient values (1239, 'Meat', 'Lamb'), (321, 'Fruit', 'Apple'), (94, 'Fruit', 'Apple'), (100, 'Sweet', 'Chocolate')
+INSERT INTO Ingredient values (1, 'Spice', 'Salt', 1), (2, 'Spice', 'Pepper', 2), (3, 'Spice', 'Chilli', 3), (10, 'Meat', 'Beef', 4), (11, 'Meat', 'Pork', 5)
+INSERT INTO Ingredient values (12, 'Meat', 'Chicken', 6), (13, 'Meat', 'Ham', 7), (50, 'Cheese', 'Cheddar', 8), (51, 'Cheese', 'Gouda', 9)
+INSERT INTO Ingredient values (71, 'Vegetable', 'Tomato', 10), (72, 'Vegetable', 'Potato', 11), (73, 'Vegetable', 'Lettuce', 12), (74, 'Vegetable', 'Asparagus', 13), (75, 'Vegetable', 'Cucumber', 14)
+INSERT INTO Ingredient values (80, 'Liquid', 'Water', 19), (81, 'Liquid', 'Juice', 20), (91, 'Sweet', 'Sugar', 21), (92, 'Fruit','Orange', 22), (93, 'Fruit', 'Raspberry', 23)
+INSERT INTO Ingredient values (1239, 'Meat', 'Lamb', 15), (321, 'Fruit', 'Apple', 16), (94, 'Fruit', 'Apple', 17), (100, 'Sweet', 'Chocolate', 18)
 SELECT * FROM Ingredient
 
 INSERT INTO DeliveryMan values (16, 'Marius Fit', '0491340914', 4), (6, 'Andrew Smith', '+390132387412', 7), (27, 'Rares Sava', '0743993013', 3) 
@@ -307,5 +307,3 @@ SELECT TOP 2 p1.Pid, p.Name, P.Price, p1.Description, p1.Duration
 FROM Product p INNER JOIN Preparation p1 ON p.Pid = p1.Pid
 WHERE p1.Description IN (SELECT p2.Description FROM Preparation p2 WHERE LEN(p2.Description) > 50 )
 ORDER BY p.Price
-
-
