@@ -24,6 +24,10 @@ class FootballClub(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def players(self):
+        return self.footballplayer_set.all()
+
 
 class FootballPlayer(models.Model):
     # id = models.PositiveIntegerField(primary_key=True, editable=False)
