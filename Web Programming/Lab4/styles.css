@@ -1,0 +1,50 @@
+
+button {
+    background-color: #148843;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 6px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e8e66;
+}
+
+.display-elems {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 500px;
+    margin-top: 40px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.link-list {
+    font-size: 22px;
+    margin-left: 25px;
+    letter-spacing: 1px;
+    color: black;
+}
+
+body {
+    background-size: cover;
+    background-image: url("images/sunset.jpg");
+}
+
+a {
+    padding: 4px;
+    color: black;
+}

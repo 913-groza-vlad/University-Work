@@ -1,0 +1,60 @@
+body {
+    background-color: #02093c;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.glow {
+    font-size: 60px;
+    color: #ff4da6;
+    text-align: left;
+    animation: glow 1s ease-in-out infinite alternate;
+    padding-bottom: 25px;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f7c6de, 0 0 40px #f3c6dc, 0 0 50px #f198c4, 0 0 60px #f171b1;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ffbede, 0 0 40px #ffbede, 0 0 50px #ffbede, 0 0 60px #ffbede;
+    }
+}
+
+.shadow {
+    color: black;
+    text-shadow: 4px 2px 4px white;
+    padding-bottom: 10px;
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+
+.fire {
+    border-radius: 10px;
+    font-size: 50px;
+    padding-top: 20px;
+    color: rgb(255, 115, 0);
+    text-shadow:
+        0 3px 20px red,
+        0 0 20px red,
+        0 0 10px orange,
+        4px -5px 6px yellow,
+        -4px -10px 10px yellow,
+        0 -5px 20px yellow;
+    animation: 2s blazing ease-out alternate linear;
+}
+
+.underlined_letters {
+    font-size: 40px;
+    color: rgb(170, 243, 237);
+    letter-spacing: 2px;
+}
+
+span {
+    background-size: 100% 15%;
+    background-repeat: repeat-x;
+    background-position: left 0% bottom 5%;
+}
+
+.rainbow {
+    background-image: linear-gradient(to right, hsl(284,91%,69%) 0%, hsl(284,91%,69%) 12.5%,hsl(329,91%,69%) 12.5%, hsl(329,91%,69%) 25%,hsl(14,91%,69%) 25%, hsl(14,91%,69%) 37.5%,hsl(59,91%,69%) 37.5%, hsl(59,91%,69%) 50%,hsl(104,91%,69%) 50%, hsl(104,91%,69%) 62.5%,hsl(149,91%,69%) 62.5%, hsl(149,91%,69%) 75%,hsl(194,91%,69%) 75%, hsl(194,91%,69%) 87.5%,hsl(239,91%,69%) 87.5%, hsl(239,91%,69%) 100%);
+}
