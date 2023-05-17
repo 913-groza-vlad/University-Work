@@ -1,0 +1,196 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.desktop {
+    width: 98%;
+    height: 100%;
+    /* background-size: cover; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#desktop2 {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("Backgrounds/img_mountains.jpg");
+    /* opacity: 0.5; */
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+#desktop1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.3)), url("Backgrounds/background-desk1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: cover;
+}
+
+
+#desktop3 {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.7)), url("Backgrounds/background-desk3.jpg");
+    /* opacity: 0.8; */
+    background-repeat: no-repeat;
+    background-position: 40% 60%;
+    background-size: cover;
+}
+
+#desktop4 {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.6)), url("Backgrounds/background-desk4.jpg");
+    /* opacity: 0.6; */
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover
+}
+
+.user-interaction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.change-desktop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.change-desktop button {
+    width: 80px;
+    height: 35px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(73, 129, 145);
+    border: solid 2px rgb(73, 129, 145);
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.navigate img {
+    width: 60px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    padding-top: 5px;
+}
+
+#button4-first {
+    color:azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigate {
+    color:rgb(141, 236, 236);
+    font-size: 14px;
+}
+
+.apps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 510px;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.icon-app {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    margin-left: 10px;
+    margin-right: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+}
+
+.icon-app img {
+    width: 65px;
+    height: 50px;
+}
+
+.icon-app p {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    margin-top: 8px;
+}
+
+.icon-app2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-app2 img {
+    width: 65px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+#youtube {
+    width: 70px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+.icon-app2 p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(162, 173, 190);
+    margin-top: 7px;
+}
+
+  
+/* Style for search container */
+.search-container {
+    width: 450px;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: none;
+    height: 25px;
+}
+  
+  /* Style for search input */
+.search-input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 14px;
+}
+
+.voice{
+    height: 20px;
+    position: relative;
+    bottom: 33px;
+    left: 440px;
+}

@@ -1,0 +1,49 @@
+h3 {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+input {
+    width: 190px;
+    font-size: 16px;
+    height: 28px;
+    padding: 2px;
+    margin: 3px;
+    border: solid;
+    border-color: indigo;
+    border-radius: 4px;
+    border-width: 2px;
+    margin-left: 72px;
+}
+
+
+.container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.confirm-button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    justify-content: space-evenly;
+}
+
+.confirm-button button {
+    width: 160px;
+    height: 45px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(73, 129, 145);
+    border: solid 2px rgb(73, 129, 145);
+    border-radius: 6px;
+    margin: 2px;
+}
+
+.confirm-button button:hover {
+    color: rgb(186, 233, 246);
+    opacity: 0.8;
+    cursor: pointer;
+}

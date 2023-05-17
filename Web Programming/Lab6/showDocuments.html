@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Documents Management</title>
+        <script src="jquery/dist/jquery.js"></script>
+        <script src="filterDocuments.js"></script>
+        <link rel="stylesheet" href="styles/docs-style.css">
+    </head>
+
+    <body>
+        <div class="container" id="docs">
+            <h2>Documents</h2>
+            <div class="filter-div">
+                <p id="filter-type">
+                    Type:
+                </p> 
+                <p id="filter-format">
+                    Format:
+                </p>
+            </div>
+            <table border="1" cellpadding = "4">
+                <tr>
+                    <th> Author </th>
+                    <th> Title </th>
+                    <th> Number of pages </th>
+                    <th> Type </th>
+                    <th> Format </th>
+                    <th> Operations </th>
+                </tr>
+            </table>
+            <div class="details">
+        
+                <div class="filter-inputs">
+                    <input type="text" placeholder="Type" id="type"/>
+                    <input type="text" placeholder="Format" id="format"/>
+                </div>
+        
+                <button class="add" onclick="window.location.href='addDocument.html'">
+                    Add document
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

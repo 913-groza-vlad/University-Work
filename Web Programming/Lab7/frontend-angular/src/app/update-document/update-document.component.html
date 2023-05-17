@@ -1,0 +1,17 @@
+<div class="container">
+    <h3>Update document with title {{document.title}}</h3>
+    <p><b>Fill in the form to update the document.</b></p>
+
+    <div class="form-update">
+        <!--<input type="hidden" name="docID" value="<?php echo trim($_GET['id']); ?>"> -->
+        <input type="text" name="author" placeholder="Author" [value]="document?.author" #author required><br>
+        <input type="text" name="title" placeholder="Title" [value]="document?.title" #title required><br>
+        <input type="number" name="number_of_pages" placeholder="Number of Pages" [value]="document?.number_of_pages" #number_of_pages required><br>
+        <input type="text" name="type" placeholder="Type" [value]="document?.type" #type required><br>
+        <input type="text" name="format" placeholder="Format" [value]="document?.format" #format required><br>
+        <div class="confirm-button">
+            <button (click)="updateDocument(author.value, title.value, number_of_pages.value, type.value, format.value)">Update Document</button>
+            <button (click)="cancelUpdate()">Cancel</button>
+        </div>
+    </div>
+</div>

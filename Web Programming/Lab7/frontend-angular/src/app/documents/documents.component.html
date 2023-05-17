@@ -1,0 +1,43 @@
+<div class="container" id="docs">
+    <h2>Documents</h2>
+    <div class="filter-div">
+        <p id="filter-type">
+            Type: {{type.value}}
+        </p> 
+        <p id="filter-format">
+            Format: {{format.value}}
+        </p>
+    </div>
+    <table border="1" cellpadding = "4">
+        <tr>
+            <th> Author </th>
+            <th> Title </th>
+            <th> Number of pages </th>
+            <th> Type </th>
+            <th> Format </th>
+            <th> Operations </th>
+        </tr>
+        <tr *ngFor="let document of documents">
+            <td>{{document.author}}</td>
+            <td>{{document.title}}</td>
+            <td>{{document.number_of_pages}}</td>
+            <td>{{document.type}}</td>
+            <td>{{document.format}}</td>
+            <td>
+                <button id="updateButton" (click)="toUpdateDocument(document.docID)">Update</button><br>
+                <button id="deleteButton" (click)="toDeleteDocument(document.docID)">Delete</button><br>
+            </td>
+        </tr>
+    </table>
+    <div class="details">
+
+        <div class="filter-inputs">
+            <input type="text" placeholder="Type" id="type" #type (input)="getDocuments(type.value, format.value)"/>
+            <input type="text" placeholder="Format" id="format" #format (input)="getDocuments(type.value, format.value)"/>
+        </div>
+
+        <button class="add" (click)="toAddDocument()">
+            Add document
+        </button>
+    </div>
+</div>

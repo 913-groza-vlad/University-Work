@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+h2 {
+    margin-left: 25px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.filter-inputs {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 30px;
+    justify-content: space-evenly;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    
+}
+
+input { 
+    width: 150px;
+    font-size: 16px;
+    padding: 2px;
+    border: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: indigo;
+}
+
+table {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.add {
+    width: 180px;
+    height: 45px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(73, 129, 145);
+    border: solid 2px rgb(73, 129, 145);
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.add:hover {
+    color: rgb(186, 233, 246);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #55a8a7;
+}
+
+.filter-div {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-evenly;
+    font-size: 16px;
+    padding: 3px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+}
+
+#updateButton{
+    border: none;
+    background-color: transparent;
+    color:rgb(0, 10, 13);
+}
+
+#deleteButton{
+    border: none;
+    background-color: transparent;
+    color:rgb(0, 10, 13);
+}
+
+#updateButton:hover{
+    color:rgb(186, 233, 246);
+    cursor: pointer;
+}
+
+#deleteButton:hover{
+    color:rgb(186, 233, 246);
+    cursor: pointer;
+}
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
