@@ -1,0 +1,47 @@
+﻿@model Lab9.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>User Login</title>
+    <style>
+        button {
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        h3 {
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Login</h3>
+
+    @using (Html.BeginForm("Login", "Authenticate", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+        <div class="container">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Username)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        
+    }
+</body>
+
+</html>
