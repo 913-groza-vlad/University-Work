@@ -5,6 +5,7 @@ import { BACKEND_URL } from "../../utils";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { FootballClub } from "../../models/FootballClub";
 import { useEffect, useState } from "react";
+import { ClubMenu } from "./ClubMenu";
 
 
 export const UpdateClub = () => {
@@ -20,9 +21,18 @@ export const UpdateClub = () => {
         city: "",
         budget: 0,
         home_kit: "",
-        players: [],
-        competitions: [],
     });
+
+    const [validEstYear, setValidEstYear] = useState(true);
+
+    const handleEstYearChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const est_year = event.target.value;
+        setClub({ ...club, establishment_year: Number(est_year)});
+        if (parseInt(est_year) >=1850 && parseInt(est_year) <= 2023)
+            setValidEstYear(true);
+        else
+            setValidEstYear(false);
+    };
 
     useEffect(() => {
         setLoading(true);
@@ -44,6 +54,7 @@ export const UpdateClub = () => {
                 alert("Club updated successfully");
             } else {
                 console.error('Error updating club:', response.statusText);
+                alert("Error updating club");
             }
             navigate(`/clubs/`);
             setLoading(false);
@@ -60,6 +71,7 @@ export const UpdateClub = () => {
 
     return (
         <Container>
+            <ClubMenu />
             <Card>
 				<CardContent>
                     <IconButton component={Link} sx={{ mr: 3 }} to={`/clubs`}>
@@ -73,6 +85,7 @@ export const UpdateClub = () => {
                             <TextField
                                 id="name"
                                 variant="outlined"
+                                value={club.name}
                                 onChange={(event) => setClub({ ...club, name: event.target.value })}
                             />
                         </Container>
@@ -84,8 +97,9 @@ export const UpdateClub = () => {
                             <TextField
                                 id="establishment_year"
                                 variant="outlined"
-                                // generate the same code for onChange, but can you convert the string to int?
-                                onChange={(event) => setClub({ ...club, establishment_year: parseInt(event.target.value) })}
+                                value={club.establishment_year}
+                                error={!validEstYear} 
+                                onChange={handleEstYearChange}
                             />
                         </Container>
 
@@ -96,6 +110,7 @@ export const UpdateClub = () => {
                             <TextField
                                 id="country"
                                 variant="outlined"
+                                value={club.country}
                                 onChange={(event) => setClub({ ...club, country: event.target.value })}
                             />
                         </Container>
@@ -107,6 +122,7 @@ export const UpdateClub = () => {
                             <TextField
                                 id="city"
                                 variant="outlined"
+                                value={club.city}
                                 onChange={(event) => setClub({ ...club, city: event.target.value })}
                             />
                         </Container>
@@ -118,7 +134,8 @@ export const UpdateClub = () => {
                             <TextField
                                 id="budget"
                                 variant="outlined"
-                                onChange={(event) => setClub({ ...club, budget: parseInt(event.target.value) })}
+                                value={club.budget}
+                                onChange={(event) => setClub({ ...club, budget: Number(event.target.value) })}
                             />
                         </Container>
                         
@@ -129,6 +146,7 @@ export const UpdateClub = () => {
                             <TextField
                                 id="home_kit"
                                 variant="outlined"
+                                value={club.home_kit}
                                 onChange={(event) => setClub({ ...club, home_kit: event.target.value })}
                             />
                         </Container>
