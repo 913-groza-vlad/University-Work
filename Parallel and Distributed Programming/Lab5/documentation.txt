@@ -1,0 +1,83 @@
+The following algorithms are used to compute the multiplication of two polinomials:
+
+1. The classic sequential algorithm for multiplying two polynomials is a straightforward method based on the distributive property.
+Given two polynomials P and Q, their product computation involves multiplying each term of the first polynomial with each term of the second polynomial 
+and adding up the results for terms with the same degree. The resulting polynomial R will have a degree equal to the sum of the degrees of P and Q.
+The classic sequential algorithm uses nested loops to iterate over all pairs of coefficients in P and Q and accumulates the products into the corresponding coefficients 
+of the result polynomial. It has a complexity of O(n*m), where n and m are the degrees of the input polynomials.
+
+2. The parallel approach for the classic polynomial multiplication algorithm involves dividing the task of computing the product into parallel tasks 
+that can be executed concurrently. Each task is responsible for calculating a portion (a couple of coefficients) of the result polynomial.
+This algorithm works in the following way: The range of coefficients is divided into several subranges, each assigned to a separate thread. 
+This division is done to parallelize the computation. For each subrange, a separate Task is created. Each Task is responsible for computing a portion 
+of the result polynomial. The created tasks are executed concurrently using multiple threads. Each task independently calculates its assigned portion of the result.
+The level of parallelism is determined by the number of threads / tasks and how coefficient range is divided among them, so each task has a roughly equal amount of work.
+
+3. The Karatsuba sequential algorithm is a fast multiplication algorithm that uses a recursive divide-and-conquer approach. It's particularly efficient for large numbers 
+and polynomials. The Karatsuba algorithm for polynomial multiplication is based on the principle of reducing the number of multiplications needed 
+compared to the classic algorithm (we have only 3 multiplications to perform instead of 4 in the classic algorithm). Overview of the implementation:
+If the degree of either input polynomial P or Q is less than 2, switch to the classic polynomial multiplication algorithm. This is the base case 
+that solves smaller subproblems directly. Divide each input polynomial p and q into low and high parts. For a polynomial of degree n, 
+divide it into two parts of degree n/2, then perform recursive calls of the multiply method in order to multiply the four obtained polynomials accordingly.
+In the end, the results of this multiplications are combined to obtained the coefficients of the resulting polynomial.
+The algorithm employs recursion to handle smaller subproblems, allowing it to leverage the divide-and-conquer strategy. It educes the number of multiplications 
+needed compared to the classic algorithm, providing improved efficiency for large input polynomials => the complexity is O(n^log2(3)).
+
+4. The parallel approach for the Karatsuba algorithm leverages parallelism to enhance the performance of the Karatsuba algorithm by distributing the workload 
+across multiple threads. The base case of the recursive algorithm consists in checking if the degree of one of the input polynomials is less then a threshold
+(this should be based on the degree of the polynomials). The divide of the polynomials is the same as for the sequential algorithm,
+for parallelizing the multiplication we use a RecursiveTask, which implements the compute method to perform parallelized multiplication and combination of 
+polynomial terms, and the ForkJoinPool to manage the parallel execution of tasks. Then, the tasks are submitted for parallel execution and their completion is awaited.
+The effectiveness of parallelism depends on the degree of the polynomials and the available computing resources. It's generally more beneficial for larger polynomials, 
+where the overhead of parallelization is outweighed by parallel execution gains.
+
+Performance measurements:
+ -> tests performed:
+- degree P = 5, degree Q = 5
+Classic sequential: ~ 0 ms
+Classic parallel (3 threads): 4 ms
+Karatsuba sequential: 1 ms
+Karatsuba parallel (threshold 2): 11 ms
+
+- degree P = 25, degree Q = 25
+Classic sequential: 1 ms
+Classic parallel (12 threads): 13 ms
+Karatsuba sequential: 3 ms
+Karatsuba parallel (threshold 10): 17 ms
+
+- degree P = 100, degree Q = 100
+Classic sequential: 4 ms
+Classic parallel (30 threads): 16 ms
+Karatsuba sequential: 11 ms
+Karatsuba parallel (threshold 25): 32 ms
+
+- degree P = 100, degree Q = 100
+Classic sequential: 4 ms
+Classic parallel (50 threads): 10 ms
+Karatsuba sequential: 8 ms
+Karatsuba parallel (threshold 35): 10 ms
+
+- degree P = 250, degree Q = 250
+Classic sequential: 14 ms
+Classic parallel (100 threads): 16 ms
+Karatsuba sequential: 17 ms
+Karatsuba parallel (threshold 50): 23 ms
+
+- degree P = 500, degree Q = 500
+Classic sequential: 26 ms
+Classic parallel (200 threads): 58 ms
+Karatsuba sequential: 40 ms
+Karatsuba parallel (threshold 100): 37 ms
+
+- degree P = 350, degree Q = 650
+Classic sequential: 24 ms
+Classic parallel (150 threads): 46 ms
+Karatsuba sequential: 57 ms
+Karatsuba parallel (threshold 100): 34 ms
+
+- degree P = 1000, degree Q = 1000
+Classic sequential: 38 ms
+Classic parallel (250 threads): 78 ms
+Karatsuba sequential: 76 ms
+Karatsuba parallel (threshold 200): 66 ms
+

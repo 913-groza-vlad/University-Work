@@ -1,0 +1,152 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main(Autosaved).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mails&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GenerateEmailSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "index&Sequence_1",
+        "random&Sequence_1",
+        "nrOfWords&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_mailBody",
+        "in_keywords"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SendEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_mailBody",
+        "in_emailAddress"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "RetrieveEmail.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "emailAddress",
+        "mails"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "X_SearchKeyword.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "variable1&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "word",
+        "currentDate"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "WriteOutputReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "_out_BrowserScope_1__UiBrowser&Sequence_15",
+        "PostsDataTable&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "outputReport",
+        "word"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "validEmail&Flowchart_3",
+        "readKeywords&Flowchart_1",
+        "mails&Flowchart_1",
+        "keywords&Flowchart_1",
+        "mailBodyWords&Flowchart_1",
+        "currentDate&Flowchart_1",
+        "outputReport&Flowchart_1",
+        "replyMailBody&Flowchart_1",
+        "emailAddress&Flowchart_1",
+        "mailBody&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "OpenBrowser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CloseBrowser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main2.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mails&Flowchart_2",
+        "keywords&Flowchart_2",
+        "mailBodyWords&Flowchart_2",
+        "currentDate&Flowchart_2",
+        "outputReport&Flowchart_2",
+        "replyMailBody&Flowchart_2",
+        "emailAddress&Flowchart_2",
+        "mailBody&Flowchart_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ReadKeywordsFromFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "keywordsFile&Sequence_2",
+        "_out_ExcelReadColumn_1__Result&Sequence_3",
+        "readKeywords&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_keywords"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

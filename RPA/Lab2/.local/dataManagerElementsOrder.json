@@ -1,0 +1,60 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "score&Sequence_7",
+        "questions&Sequence_7",
+        "user&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "QuizGameFlow.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "questionAnswered&Flowchart_3",
+        "answer&Flowchart_3",
+        "again&Flowchart_3",
+        "feedback&Flowchart_3",
+        "corresp_feedback&Flowchart_3",
+        "score&Flowchart_3",
+        "questions&Flowchart_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "user"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SelectQuestions.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "questionDataTable&Sequence_1",
+        "question&Sequence_1",
+        "questionList&Sequence_1",
+        "random&Sequence_1",
+        "randomIndex&Sequence_3",
+        "randomKey&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "questions",
+        "file"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

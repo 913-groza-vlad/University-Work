@@ -1,0 +1,22 @@
+Performance measurements:
+-> test performed:
+
+- degree P = 5, degree Q = 5, nodes computing the multiplication = 3
+Classic algorithm: 41ms
+Karatsuba algorithm: 36ms
+
+- degree P = 25, degree Q = 25, nodes computing the multiplication = 7
+Classic algorithm: 57ms
+Karatsuba algorithm: 55ms
+
+- degree P = 100, degree Q = 100, nodes computing the multiplication = 10
+Classic algorithm: 76ms
+Karatsuba algorithm: 96ms
+
+- degree P = 250, degree Q = 250, nodes computing the multiplication = 15
+Classic algorithm: 118ms
+Karatsuba algorithm: 196ms
+
+- degree P = 250, degree Q = 250, nodes computing the multiplication = 25
+Classic algorithm: 195ms
+Karatsuba algorithm: 310ms

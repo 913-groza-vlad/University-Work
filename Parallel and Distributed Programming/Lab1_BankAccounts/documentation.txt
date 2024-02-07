@@ -1,0 +1,39 @@
+
+In my application, multiple threads perform different transfer operations between accounts
+(an amount of money from an account is transfered to another), so the shared data must be protected 
+in order to obtain consistent and correct results/outputs for our operations.
+So, to prevent race conditions, locking mechanisms are used in the methods where account data is
+processed, ensuring the operations are peformed consistently.
+
+In the Account class, we have:
+- in the method 'transfer', two locks, firstLock and secondLock, which are used to synchronize access to the two accounts 
+involved in the transfer. They are acquired to protect against potential deadlocks. We ensure that mutex of the account with a smaller id 
+is always locked first, then the lock of the other account is acquired. The locks are released in the opposite order, first of the secondLock,
+then the firstLock.
+The following invariants are protected: 
+The balance of both the source account (this account) and the target account (toAccount)
+The synchronization ensures that the balance updates for both accounts are atomic and consistent.
+Operation Log: The operations list of both the source and target accounts is protected. This ensures that transfer records are added to both accounts' logs consistently.
+Console Output: The synchronized (System.out) block protects the printing of transfer information to the console, ensuring that print statements are not interleaved.
+
+- in the method checkBalanceAndOperations(), a lock is used to protect the access to the account resources.
+As the balance of the account is compared with the expected balance calculated based on the recorded transfer operations, 
+the synchronization ensures that balance and operations are not modified concurrently, maintaining data integrity.
+The synchronized (System.out) block protects the printing of balance and operation log to the console. 
+This ensures that the output is not interleaved and maintains clarity.
+
+The checker thread executes a consistency check by calling checkBalanceAndOperations method for each account to
+verify if the amount of money in that account corresponds with the operations records associated and to print the logs.
+In order to print the log of each account without any transaction to happen meantime, all accounts locks are acquired before
+executing the method that checks every account balance and after they are finished all locks are released.
+
+Hardware platform: 
+Processor Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz   2.59 GHz
+RAM Memory: 24.0 GB
+
+Tests performed:
+- 4 accounts and 10 threads -> time consumed 1053 milliseconds
+- 7 accounts and 15 threads -> time consumed 1063 milliseconds
+- 20 accounts and 50 threads -> time consumed 1100 milliseconds
+- 30 accounts and 100 threads -> time consumed 1142 milliseconds
+- 50 accounts and 250 threads -> time consumed 1453 milliseconds

@@ -1,0 +1,250 @@
+#prof
+	id = 1
+	name = Victor
+#prof
+	id = 2
+	name = Red
+#prof
+	id = 3
+	name = Philip
+#prof
+	id = 4
+	name = Marry
+#prof
+	id = 5
+	name = Donald
+#prof
+	id = 6
+	name = Mark
+#prof
+	id = 7
+	name = Peter
+#prof
+	id = 8
+	name = John
+#prof
+	id = 9
+	name = Ben
+#prof
+	id = 10
+	name = Mike
+#prof
+	id = 11
+	name = Steve
+#prof
+	id = 12
+	name = Ann
+#prof
+	id = 13
+	name = Alex
+
+#course
+	id = 1
+	name = Introduction to Programming
+#course
+	id = 2
+	name = Introduction to Computer Architecture
+#course
+	id = 3
+	name = Business Applications
+#course
+	id = 4
+	name = English
+#end
+#course
+	id = 5
+	name = Discrete Mathematic I
+#course
+	id = 6
+	name = Linear Algebra
+#course
+	id = 7
+	name = Introduction to Information Technology I
+#course
+	id = 8
+	name = System Administration and Maintenance I
+
+#room
+	name = R3
+	lab = true
+	size = 24
+#room
+	name = R7
+	lab = false
+	size = 60
+#room
+    name = R8
+    lab = false
+    size = 75
+
+#group
+	id = 933
+	size = 23
+#group
+	id = 935
+	size = 19
+#group
+	id = 937
+	size = 20
+#group
+	id = 932
+	size = 19
+
+#class
+	professor = 1
+	course = 1
+	duration = 2
+	group = 932
+	group = 933
+#class
+	professor = 1
+	course = 1
+	duration = 2
+	group = 935
+	group = 937
+#class
+	professor = 9
+	course = 1
+	duration = 3
+	group = 932
+	lab = true
+#class
+	professor = 9
+	course = 1
+	duration = 3
+	group = 933
+	lab = true
+#class
+	professor = 9
+	course = 1
+	duration = 3
+	group = 935
+	lab = true
+#class
+	professor = 9
+	course = 1
+	duration = 3
+	group = 937
+	lab = true
+#class
+	professor = 2
+	course = 2
+	duration = 2
+	group = 935
+	group = 937
+#class
+	professor = 2
+	course = 2
+	duration = 2
+	group = 932
+	group = 933
+#class
+	professor = 3
+	course = 2
+	duration = 2
+	group = 932
+	lab = true
+#class
+	professor = 3
+	course = 2
+	duration = 2
+	group = 933
+	lab = true
+#class
+	professor = 3
+	course = 2
+	duration = 2
+	group = 935
+	lab = true
+#class
+	professor = 3
+	course = 2
+	duration = 2
+	group = 937
+	lab = true
+#class
+	professor = 4
+	course = 4
+	duration = 2
+	group = 935
+	group = 937
+#class
+	professor = 4
+	course = 4
+	duration = 2
+	group = 935
+	group = 937
+#class
+	professor = 4
+	course = 4
+	duration = 2
+	group = 932
+	group = 933
+#class
+	professor = 4
+	course = 4
+	duration = 2
+	group = 932
+	group = 933
+#class
+	professor = 5
+	course = 6
+	duration = 2
+	group = 932
+	group = 933
+	group = 935
+#class
+	professor = 5
+	course = 6
+	duration = 2
+	group = 932
+	group = 933
+	group = 935
+#class
+	professor = 7
+	course = 5
+	duration = 2
+	group = 932
+    group = 933
+    group = 935
+#class
+	professor = 7
+	course = 5
+	duration = 2
+	group = 932
+    group = 933
+#class
+	professor = 10
+	course = 5
+	duration = 2
+	group = 935
+#class
+	professor = 8
+	course = 3
+	duration = 2
+	group = 933
+#class
+	professor = 8
+	course = 3
+	duration = 2
+	group = 935
+#class
+	professor = 12
+	course = 3
+	duration = 2
+	group = 932
+#class
+	professor = 12
+	course = 3
+	duration = 2
+	group = 937
+#class
+	professor = 11
+	course = 7
+	duration = 2
+	group = 937
+#class
+	professor = 13
+	course = 8
+	duration = 2
+	group = 937

@@ -1,0 +1,33 @@
+-> Lab3
+
+Performance/Execution time for the following values:
+- Thread pool / 3x3 matrix / 4 tasks compute the elements row after row -> 27 ms
+- Thread pool / 3x3 matrix / 4 tasks compute the elements column after column -> 16 ms
+- Thread pool / 3x3 matrix / 4 tasks compute the elements by k-th element -> 15 ms
+- Simple Threads / 3x3 matrix / 4 tasks compute the elements row after row -> 14 ms
+- Simple Threads / 3x3 matrix / 4 tasks compute the elements column after column -> 13 ms
+- Simple Threads / 3x3 matrix / 4 tasks compute the elements by k-th element -> 12 ms
+
+- Thread pool / 9x9 matrix / 4 tasks compute the elements row after row -> 23 ms
+- Thread pool / 9x9 matrix / 4 tasks compute the elements column after column -> 39 ms
+- Thread pool / 9x9 matrix / 4 tasks compute the elements by k-th element -> 15 ms
+- Simple Threads / 9x9 matrix / 4 tasks compute the elements row after row -> 13 ms
+- Simple Threads / 9x9 matrix / 4 tasks compute the elements column after column -> 15 ms
+- Simple Threads / 9x9 matrix / 4 tasks compute the elements by k-th element -> 16 ms
+
+- Thread pool / 100x100 matrix / 20 tasks compute the elements row after row -> 45 ms
+- Thread pool / 100x100 matrix / 20 tasks compute the elements column after column -> 50 ms
+- Thread pool / 100x100 matrix / 20 tasks compute the elements by k-th element -> 94 ms
+- Simple Threads / 100x100 matrix / 20 tasks compute the elements row after row -> 50 ms
+- Simple Threads / 100x100 matrix / 20 tasks compute the elements column after column -> 51 ms
+- Simple Threads / 100x100 matrix / 20 tasks compute the elements by k-th element -> 129 ms
+
+- Thread pool / 100x100 matrix / 50 tasks compute the elements row after row -> 79 ms
+- Thread pool / 100x100 matrix / 50 tasks compute the elements column after column -> 72 ms
+- Thread pool / 100x100 matrix / 50 tasks compute the elements by k-th element -> 107 ms
+- Simple Threads / 100x100 matrix / 50 tasks compute the elements row after row -> 127 ms
+- Simple Threads / 100x100 matrix / 50 tasks compute the elements column after column -> 95 ms
+- Simple Threads / 100x100 matrix / 50 tasks compute the elements by k-th element -> 67 ms
+
+
+

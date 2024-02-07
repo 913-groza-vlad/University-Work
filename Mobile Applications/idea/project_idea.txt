@@ -1,0 +1,72 @@
+Activity Planner Application
+
+
+Nowadays, people usually have busy schedules loaded with tasks and events, so they need to keep track of these 
+in an efficient manner. Thus, the Activity Planner mobile app is designed to help you improve your time management. 
+With this app, you can effortlessly organize your daily activity, adding information about your events/activities
+you take part in and tasks you have to do.
+
+Application features:
+  -> view all your activities: View your planned activities. The app provides an intuitive and easy-to-navigate interface, 
+			       so you can quickly access your schedule (they are displayed on the main screen of the app)
+  -> add an activitiy: you can add new activities to your list. Specify a title, type, date, start time, end time, and, 
+		       optionally, a brief description for each activity.
+  -> update your activities: If you plans change, you can easily edit your activities. Modify the details for an activity 
+			     in order to adapt to your evolving schedule.
+  -> delete activities: Got an appointment canceled or an event you no longer wish to attend? The app makes it simple 
+			to remove activities, ensuring your calendar stays up-to-date.
+
+
+Domain details:
+The entity we focus in the application is the Activity.
+It has the following fields:
+  - title: suggestive and significant expression describing the activity
+  - type: represents what kind of activity it is (social, work, fitness, hobby, entertainment, health, ...)
+  - date: the date in which the activity takes place
+  - start_time: time at which the activity begins
+  - end_time: time at which the activity finishes
+  - description: more detailed information regarding the activity
+
+
+CRUD Operations:
+
+- Create (Add) an activity:
+
+Tap the "Add Activity" button on the app's main screen, 
+which redirects you to a separate page. On this page you can:
+Enter the title of the activity and the type of the activity.
+Select the date from a user-friendly calendar picker.
+Set the start and end times using some time pickers.
+Provide a short description if needed.
+Tap "Submit" and the activity is added to your schedule.
+
+- Read (View) activities:
+
+Open the app to see a list of your planned activities(the title of each activity is displayed).
+Tap on any activity to view its details, including its type, date, start time, end time and description.
+
+- Update an activity:
+
+Select the activity you want to update by pressing the edit button next to the activity to open its details.
+You will be redirected to a new page where you can modify any of the activity's attributes, 
+such as the title, type, date, start time, end time, or description.
+Tap "Submit" to confirm your changes.
+
+- Delete an activity:
+
+Locate in the list the activity you want to delete and tap on the delete icon next to it.
+A confirmation prompt will appear, then press "Confirm" to remove the activity from your schedule.
+
+
+The persistance of the application is preserved by using a remote server and a local database, 
+so the app is available both online and offline. 
+When the app is online (connected to a server), the data for listing our entities is taken from the
+server and the updates made in the list of activities are immediatelly synchronized with our db.
+
+When the application is offline, the CRUD operations work in the following way:
+ - create: the input will be saved in the local database and, when the device is able to connect to the server, the created entries will be pushed
+ - read: the activities from the local database will be displayed, being notified that there is no server connection
+ - update: the changes performed on the fields of an activity are saved in the local db, and the updates made will be synchronized with the server when device is back online
+ - delete: the operation is not available offline, so a message will be displayed to announce the user of its unavailability
+
+When the application is back online, the changes on the local database are sent to the server.
